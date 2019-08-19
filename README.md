@@ -8,7 +8,7 @@ This Terraform module creates SNS Topic subcriptions from a list of input
 
 ## Usage
 
-### WAF ACL
+### sns_topic_subscriptions
 
 ```hcl
 locals {
