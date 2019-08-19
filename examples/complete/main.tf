@@ -1,3 +1,7 @@
+provider "aws" {
+  region = "us-east-1"
+}
+
 locals {
   sns_topic_subscriptions = [
     {
