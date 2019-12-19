@@ -4,4 +4,5 @@ resource "aws_sns_topic_subscription" "this" {
   protocol               = each.value.protocol
   endpoint               = each.value.endpoint
   endpoint_auto_confirms = each.value.endpoint_auto_confirms
+  raw_message_delivery   = lookup(each.value, "raw_message_delivery", null)
 }
