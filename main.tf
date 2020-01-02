@@ -5,4 +5,5 @@ resource "aws_sns_topic_subscription" "this" {
   endpoint               = each.value.endpoint
   endpoint_auto_confirms = each.value.endpoint_auto_confirms
   raw_message_delivery   = each.value.raw_message_delivery
+  filter_policy          = each.value.filter_policy
 }
