@@ -10,6 +10,8 @@ locals {
       protocol               = "lambda"
       endpoint               = "some_arn"
       endpoint_auto_confirms = true
+      raw_message_delivery   = true
+      filter_policy          = ""
     },
     {
       name                   = "random_named2"
@@ -17,6 +19,8 @@ locals {
       protocol               = "lambda"
       endpoint               = "some_arn2"
       endpoint_auto_confirms = false
+      raw_message_delivery   = false
+      filter_policy          = "{\"LiteMessageType\":[\"OrderCreated\"]}"
     },
   ]
 }
