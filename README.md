@@ -38,11 +38,28 @@ module "subscriptions" {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| terraform | >= 0.12.26 |
+| aws | >= 3 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| aws | >= 3 |
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|:----:|:-----:|:-----:|
-| sns\_topic\_subscriptions | SNS Subscriptions | object | `[]` | no |
+|------|-------------|------|---------|:--------:|
+| sns\_topic\_subscriptions | SNS Subscriptions | <pre>list(object({<br>    name                   = string<br>    topic_arn              = string<br>    protocol               = string<br>    endpoint               = string<br>    endpoint_auto_confirms = bool<br>    raw_message_delivery   = bool<br>    filter_policy          = string<br>  }))</pre> | `[]` | no |
+
+## Outputs
+
+No output.
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
@@ -51,4 +68,4 @@ module "subscriptions" {
 
 [MIT](LICENSE)
 
-Copyright (c) 2019 [Flaconi GmbH](https://github.com/Flaconi)
+Copyright (c) 2021 [Flaconi GmbH](https://github.com/Flaconi)
