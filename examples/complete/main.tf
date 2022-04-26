@@ -12,6 +12,7 @@ locals {
       endpoint_auto_confirms = true
       raw_message_delivery   = true
       filter_policy          = ""
+      redrive_policy         = null
     },
     {
       name                   = "random_named2"
@@ -21,6 +22,7 @@ locals {
       endpoint_auto_confirms = false
       raw_message_delivery   = false
       filter_policy          = "{\"LiteMessageType\":[\"OrderCreated\"]}"
+      redrive_policy         = "{\"deadLetterTargetArn\": \"arn:aws:sqs:us-east-1:806199016981:MyDeadLetter\"}"
     },
   ]
 }
