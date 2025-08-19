@@ -6,5 +6,6 @@ resource "aws_sns_topic_subscription" "this" {
   endpoint_auto_confirms = each.value.endpoint_auto_confirms
   raw_message_delivery   = each.value.raw_message_delivery
   filter_policy          = each.value.filter_policy
+  filter_policy_scope    = each.value.filter_policy_scope
   redrive_policy         = each.value.redrive_policy
 }
